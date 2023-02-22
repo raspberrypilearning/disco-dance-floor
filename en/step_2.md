@@ -94,7 +94,7 @@ A new parent will 'GameObject' will be created:
 
 ![The Hierarchy window with the 'Floor' GameObject nested inside a new object called 'GameObject'.](images/empty-parent.png)
 
-Go to the Inspector window and rename this object 'Dance Floor':
+Right-click on the new gameObject and rename it to 'Dance Floor':
 
 ![The Inspector window with the name property highlighted and the typed name 'Dance Floor'.](images/rename-gameobject.png)
 
