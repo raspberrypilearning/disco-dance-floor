@@ -1,28 +1,11 @@
-## Step title
+## Dim the lights
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Add an introductory sentence. What will learners achieve by the end of this step?
+In this step you will dim the lights in your disco dance floor scene and add a spotlight that follows your mirror ball. 
 </div>
 <div>
-Image, gif or video showing what they will achieve by the end of the step. ![](images/image.png){:width="300px"}
+![The output of step four.](images/step-four-output.gif){:width="350px"}
 </div>
 </div>
 
---- task ---
-
-Another step of tasks to complete.
-
---- /task ---
-
---- task ---
-
-Step content... 
-Can use:
-**Test:**
-**Choose:**
-**Tip:**
-
---- /task ---
-
---- save ---
