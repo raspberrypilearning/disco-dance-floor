@@ -6,7 +6,7 @@ In this step you will add code to your script that will change the tile to a ran
 </div>
 <div>
 <video width="640" height="360" controls preload="none" poster="images/add-sound.png">
-<source src="images/colours-sound.mp4" type="video/mp4">
+<source src="images/tile-sounds.mp4" type="video/mp4">
 Your browser does not support WebM video, try FireFox or Chrome
 </video>
 </div>
@@ -187,7 +187,7 @@ Your browser does not support WebM video, try FireFox or Chrome
 **Test:** Play your project. 
 
 <video width="640" height="360" controls preload="none" poster="images/tile-sound.png">
-<source src="images/tile-sound.mp4" type="video/mp4">
+<source src="images/tile-sounds.mp4" type="video/mp4">
 Your browser does not support WebM video, try FireFox or Chrome
 </video>
 
