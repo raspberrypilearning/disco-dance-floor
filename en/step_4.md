@@ -61,15 +61,7 @@ In the 'Hierarchy' window. Expand the Floor GameObject and highlight all of the 
 
 --- task ---
 
-Go to the 'Inspector' window. Expand the 'Materials' section and click on the small circle to the right of 'Material'.
-
-![A screenshot highlighting the small circle next to 'Materials'.](images/small-circle.png)
-
---- /task ---
-
---- task ---
-
-Search for the 'Glass' material that you just created and select it.
+Drag the 'Glass' material that you just created to the 'Inspector' window below 'Add Component'.
 
 This will apply the 'Glass' material to all of your tiles.
 
@@ -139,7 +131,7 @@ In the 'Hierarchy' window, right-click and go to 'Light' -> 'Spotlight' to creat
 
 --- task ---
 
-With the Spotlight selected, go to the 'Inspector' window.
+With the 'Spot Light' selected, go to the 'Inspector' window.
 
 Change the transform position to X = `1.5`, Y=`7`, Z=`1.5` to move the spotlight above your mirror ball.
 
@@ -159,11 +151,16 @@ Staying in the 'Inspector' window. Change the following settings:
 
 --- /task ---
 
-### Add the spotlight controller
+--- task ---
+**Test:** 'Play' your project to see the spotlight over the ball. Use the keys to move the ball. The spotlight will stay in the same position. 
+
+--- /task ---
+
+### Make the spotlight follow the ball
 
 --- task ---
 
-Go to the 'Hierarchy' window and select the 'Ball' GameObject.
+Go to the 'Hierarchy' window and select the **Ball** GameObject.
 
 In the 'Inspector' window, go to 'Add Component' and search for 'Script' and choose 'NewScript'.
 
@@ -190,7 +187,6 @@ public class SpotlightController : MonoBehaviour
 {
     public GameObject Spotlight;
     Vector3 spotOffset;
-
 
     // Start is called before the first frame update
     void Start()
@@ -229,6 +225,8 @@ Drag the 'Spot Light' GameObject to the Spotlight variable in the 'Inspector' wi
 **Test** your code by running your project. The spotlight should follow the mirror ball.
 
 ![A short animation showing the spotlight following the mirror ball.](images/step-four-output.gif)
+
+**Debug** Make sure the 'SpotlightController' script is on the 'Ball' GameObject. The 'Ball' controls the position of the spotlight. 
 
 --- /task ---
 
