@@ -5,37 +5,39 @@
 legend: Question 2 of 3
 ---
 
-You made Pico say hello in a speech bubble.
-
-```blocks3
-say [Hello!] for [2] secs
-```
-
-Where would you go to find this block?
+Which type of light GameObject did you use to closely follow your ball and light it from above.
 
 --- choices ---
 
-- (x) 
+- ( ) Point light
 
   --- feedback ---
+
+  No, you didn’t use this type of light in your project. Think about the light GameObjects you used. 
 
   --- /feedback ---
 
-- ( ) 
+- ( ) Directional light
 
   --- feedback ---
+
+  Not quite, you did edit this light in your project but this is a distant light source
 
   --- /feedback ---
 
-- ( ) 
+- (x) Spot light
 
   --- feedback ---
+
+  That’s correct. You used a spotlight to cast a cone shape of light directly onto your ball as it moved.
 
   --- /feedback ---
 
-- ( ) 
+- ( ) Area light
 
   --- feedback ---
+
+  No, you didn’t use this type of light in your project. Think about the light GameObjects you used. 
 
   --- /feedback ---
 

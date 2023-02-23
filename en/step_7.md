@@ -19,6 +19,8 @@ Use materials from the Project window, or create your own materials, then add th
 + Cubes (start material)
 + Skybox 
 
+<mark>MARC - ADD AN UPGRADE EXAMPLE PLEASE</mark>
+
 <iframe allowtransparency="true" width="710" height="450" src="https://explore-a-3d-world-extended.rpfilt.repl.co" frameborder="0"></iframe>
 
 --- collapse ---
