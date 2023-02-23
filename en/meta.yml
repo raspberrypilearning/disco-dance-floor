@@ -1,0 +1,28 @@
+---
+title: Disco dance floor
+hero_image: images/banner.png
+description: Create a disco dance floor with a moving mirror ball that creates cool tile effects and sounds.
+version: 4
+listed: false
+copyedit: false
+last_tested: "2021-03-26"
+steps:
+  - title: You will make
+  - title: Build the disco floor
+  - title: Roll a mirror ball
+    completion:
+      - engaged
+  - title: Dim the lights
+  - title: Add random colours and sounds
+    completion:
+      - internal
+  - title: Quick quiz
+    knowledge_quiz:
+      path: quiz1
+      version: 1
+      questions: 3
+      passing_score: 3
+  - title: Upgrade your project
+  - title: What next?
+    completion:
+      - external
