@@ -9,3 +9,60 @@ In this step you will add code to your script that will change the tile to a ran
 </div>
 </div>
 
+--- task ---
+
+--- code ---
+---
+language: cs
+filename: SpotlightController.cs
+line_numbers: true
+line_number_start: 1
+line_highlights: 
+---
+
+
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+
+
+--- /task ---
+
+--- task ---
+
+
+
+--- /task ---
+
+--- task ---
+
+
+
+--- /task ---
+
+--- task ---
+
+
+
+--- /task ---
+
+--- task ---
+
+
+
+--- /task ---
+
+--- task ---
+
+
+
+--- /task ---
+
+--- task ---
+
+
+
+--- /task ---
