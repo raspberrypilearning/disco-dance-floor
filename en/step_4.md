@@ -5,7 +5,7 @@
 In this step you will dim the lights in your disco dance floor scene and add a spotlight that follows your mirror ball. 
 </div>
 <div>
-![The output of step four.](images/step-four-output.gif){:width="350px"}
+![A short animation showing the spotlight following the mirror ball.](images/step-four-output.gif){:width="350px"}
 </div>
 </div>
 
@@ -156,6 +156,79 @@ Staying in the 'Inspector' window. Change the following settings:
 + Normal bias: `0.4`
 + Near plane: `0.1`
 + Render mode: Important
+
+--- /task ---
+
+### Add the spotlight controller
+
+--- task ---
+
+Go to the 'Hierarchy' window and select the 'Ball' GameObject.
+
+In the 'Inspector' window, go to 'Add Component' and search for 'Script' and choose 'NewScript'.
+
+Name the new script 'SpotlightController' and drag it into the 'Scripts' folder.
+
+--- /task ---
+
+--- task ---
+
+Double-click on the 'SpotlightController' script to open it and enter the following code:
+
+--- code ---
+---
+language: cs
+filename: SpotlightController.cs
+line_numbers: true
+line_number_start: 1
+line_highlights: 
+---
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+public class SpotlightController : MonoBehaviour
+{
+    public GameObject Spotlight;
+    Vector3 spotOffset;
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        spotOffset = Spotlight.transform.position - this.transform.position;
+    }
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        Spotlight.transform.position = this.transform.position + spotOffset;
+    }
+}
+
+--- /code ---
+
+**Save** and return to Unity.
+
+--- /task ---
+
+--- task ---
+
+Select the 'Ball' GameObject in the 'Hierarchy' window. 
+
+The Spotlight Controller script needs to know which Spotlight it should use.
+
+Drag the 'Spot Light' GameObject to the Spotlight variable in the 'Inspector' window.
+
+![A screenshot showing Spot Light GameObject added to the Spotlight Controller script in the Inspector window.](images/spotlight-variable.png)
+
+--- /task ---
+
+--- task ---
+
+**Test** your code by running your project. The spotlight should follow the mirror ball.
+
+![A short animation showing the spotlight following the mirror ball.](images/step-four-output.gif)
 
 --- /task ---
 
