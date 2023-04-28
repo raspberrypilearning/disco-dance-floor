@@ -60,9 +60,15 @@ Position X=`1`, Y=`1.5`, Z=`1` and Scale X=`2`, Y=`2`, Z=`2`.
 
 Make sure that the 'Ball' is selected in the 'Hierarchy'. Go to the 'Inspector Window' and choose 'Add Component'.
 
-Type in 'Rigid' and select the 'RigidBody' component to add it to the ball. This allows the ball to work with gravity. 
+Type in 'Rigid' and select the 'Rigidbody' component to add it to the ball. This allows the ball to work with gravity. 
 
-![A screenshot showing the RigidBody component added in the inspector window.](images/rigid-body.png)
+![A screenshot showing the Rigidbody component added in the inspector window.](images/rigid-body.png)
+
+--- /task ---
+
+--- task ---
+
+In the Inspector Window click the dropdown next to 'Tag' and add the 'Player' tag to the Ball GameObject.
 
 --- /task ---
 
@@ -78,7 +84,7 @@ Drag the 'MirrorBall' material onto the 'Ball' GameObject in the Scene View.
 
 --- task ---
 
-With the 'Ball' selected. Press the <kbd>F</kbd> key to shift focus to the 'Ball'.
+With the 'Ball' selected. Press <kbd>Shift</kbd> + <kbd>F</kbd> to shift focus to the 'Ball'.
 
 ![A screenshot showing the focus shifted to the 'Ball'.](images/ball-zoom.png)
 
@@ -88,43 +94,32 @@ With the 'Ball' selected. Press the <kbd>F</kbd> key to shift focus to the 'Ball
 
 --- task ---
 
-Go to the hierarchy window and select the 'Ball' gameObject. In the Inspector, click 'Add Component' and type `script`. 
+Go to the hierarchy window and select the 'Ball' GameObject. In the Inspector, click 'Add Component' and type `BallController`. 
 
-Create a new script called `BallController`:
+Select the BallController Script.
+
+--- collapse ---
+
+---
+title: I don't have a BallController script
+---
+
+Create a new script called `BallController` by clicking 'New script' and then 'Create and Add':
 
 ![A screenshot of the Inspector New Script menu with title `BallController` and button 'Create and Add'.](images/new-ball-script.png)
-
---- /task ---
-
---- task ---
 
 Go to the Project window. The new 'BallController' script will be saved in the Assets folder. Drag the new script to the ‘Scripts’ folder to organise your files.
 
 ![A screenshot of the Projects window Asset folder contents. The BallController script is highlighted.](images/assets-script.png)
 
---- /task ---
-
---- task ---
-
-Double click on ‘BallController’ script. The script will open in a separate code editor.
+Double click on the ‘BallController’ script. The script will open in a separate code editor.
 
 Copy or type this code to make the ball move:
-
-**Tip:** This is the same code that you used to move the ball in your Rainbow run project. 
-
---- collapse ---
----
-title: I want to use different keys
----
-
-If you want to know the naming conventions to use for the other keys on your keyboard then you can visit the [Unity Documentation](https://docs.unity3d.com/Manual/class-InputManager.html){:target="_blank"}.
-
---- /collapse ---
 
 --- code ---
 ---
 language: cs
-filename: CameraController.cs
+filename: BallController.cs
 line_numbers: true
 line_number_start: 1
 line_highlights: 
@@ -134,53 +129,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class BallController : MonoBehaviour
 {
     private Rigidbody rb;
     public Transform cameraTransform;
-
+    public string rightKey;
+    public string leftKey;
+    public string upKey;
+    public string downKey;
+    
     // Start is called before the first frame update
     void Start()
     {
-        rb = this.GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
         rb.transform.forward = cameraTransform.forward;
-
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown("space"))
-        {
-            rb.AddForce(0f, 75f, 0f);
-        }
-    }
-
-    // FixedUpdate is called once per fixed frame-rate frame
+    // Update is called once per frame
     void FixedUpdate()
     {
-        // Calculates cameraTransform.forward without the y value so the ball doesn't move up and down on the Y axis
         Vector3 forward = new Vector3(cameraTransform.forward.x, 0, cameraTransform.forward.z).normalized;
         Vector3 right = Quaternion.AngleAxis(90, Vector3.up) * forward;
         Vector3 left = -right;
         Vector3 backward = -forward;
 
-        if (Input.GetKey("d"))
+        if (Input.GetKey(rightKey))
         {
             rb.AddForce(right * 5f);
         }
 
-        if (Input.GetKey("a"))
+        if (Input.GetKey(leftKey))
         {
             rb.AddForce(left * 5f);
         }
 
-        if (Input.GetKey("w"))
+        if (Input.GetKey(upKey))
         {
             rb.AddForce(forward * 10f);
         }
 
-        if (Input.GetKey("s"))
+        if (Input.GetKey(downKey))
         {
             rb.AddForce(backward * 2f);
         }
@@ -188,6 +176,10 @@ public class BallController : MonoBehaviour
 }
 
 --- /code ---
+
+Save your script and switch back to the Unity editor.
+
+--- /collapse ---
 
 --- /task ---
 
@@ -197,9 +189,24 @@ Save your script and switch back to the Unity Editor and click on the 'Ball' Gam
 
 Find the 'Camera Transform' property of the Ball's BallController script in the Inspector window.
 
-Click on the circle to the right of the Camera Transform property and choose the 'Main Camera' GameObject':
+Click on the circle to the right of the Camera Transform property and choose the 'Main Camera' GameObject:
 
 ![The BallController script component on the Ball with Camera Transform property dropdown menu and 'Main Camera' selected.](images/camera-transform-script.png)
+
+Set the key variables to whichever keys you want to use to control your ball:
+
+![Screenshot of the BallController component with the keys set as: up = w, left = a, down = s and right = d]()
+
+--- collapse ---
+---
+title: I want to use different keys
+---
+
+If you want to know the naming conventions to use for the other keys on your keyboard then you can visit the [Unity Documentation](https://docs.unity3d.com/Manual/class-InputManager.html){:target="_blank"}.
+
+You can enter the names into the Inspector.
+
+--- /collapse ---
 
 --- /task ---
 
@@ -207,7 +214,7 @@ Click on the circle to the right of the Camera Transform property and choose the
 
 **Test:** Select the Game view tab and click on the 'Play' button to run your project.  
 
-Use the <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd> and <kbd>D</kbd> keys to move the ball across the floor: 
+Use the keys you set in the Inspector to move the ball across the floor: 
 
 ![A short animation showing the ball rolling across the tiled floor.](images/move-ball.gif)
 

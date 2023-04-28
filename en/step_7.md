@@ -16,7 +16,7 @@ Add more Spotlight GameObjects then change:
 Use materials from the Project window, or create your own materials, then add them to the:
 + Ball
 + Walls
-+ Cubes (start material)
++ Tiles (as a start material for the Cubes)
 + Skybox 
 
 <mark>MARC - ADD AN UPGRADE EXAMPLE PLEASE</mark>

@@ -37,7 +37,7 @@ With the 'Glass' material selected. Go to the 'Inspector' window.
 
 Change the 'Rendering Mode' to 'Transparent'.
 
-Set 'Metallic' to `0.5` and set 'Smoothness' to `0.5`.
+Set 'Metallic' to `0.5`.
 
 ![A screenshot showing the new settings in the 'Inspector' window.](images/glass-settings.png)
 
@@ -73,7 +73,7 @@ This will apply the 'Glass' material to all of your tiles.
 
 --- task ---
 
-In the 'Materials' folder in the 'Project' window, add a new material named 'DarkSkybox'.
+In the 'Materials' folder in the 'Project' window, create a new material named 'DarkSkybox'.
 
 --- /task ---
 
@@ -145,14 +145,15 @@ Staying in the 'Inspector' window. Change the following settings:
 + Spot Angle: `48`
 + Intensity: `2`
 + Shadow Type: Soft Shadows
-+ Normal bias: `0.4`
-+ Near plane: `0.1`
 + Render mode: Important
 
 --- /task ---
 
 --- task ---
-**Test:** 'Play' your project to see the spotlight over the ball. Use the keys to move the ball. The spotlight will stay in the same position. 
+
+**Test:** 'Play' your project to see the spotlight over the ball. Use the keys to move the ball. The spotlight will stay in the same position.
+ 
+Press the 'Play' button again to stop running your project. 
 
 --- /task ---
 
@@ -162,7 +163,7 @@ Staying in the 'Inspector' window. Change the following settings:
 
 Go to the 'Hierarchy' window and select the **Ball** GameObject.
 
-In the 'Inspector' window, go to 'Add Component' and search for 'Script' and choose 'NewScript'.
+In the 'Inspector' window, go to 'Add Component' and search for 'Script' and choose 'New script'.
 
 Name the new script 'SpotlightController' and drag it into the 'Scripts' folder.
 

@@ -12,19 +12,7 @@ Your browser does not support WebM video, try FireFox or Chrome
 </div>
 </div>
 
-### Tag the tiles
-
---- task ---
-
-Go to the Inspector window and click on the 'Tag' dropdown. Select **Add Tag**. 
-
-Click on the '+' and create a new tag named `Tile`:
-
-![A screenshot of the Inspector window with.](images/tag-dropdown.png)
-
-![A screenshot of the Inspector window 'Tags and Layers' component with a new 'Tile' task in the list.](images/new-tag.png)
-
---- /task ---
+### Add random colours to the tiles
 
 --- task ---
 
@@ -34,40 +22,48 @@ In the Hierarchy window, expand the 'Dance Floor' then 'Floor' GameObjects. Sele
 
 ![The Hierarchy window with the 'Floor' GameObject expanded showing a number of cube objects within it. The cubes are names 'Cube', 'Cube.001', 'Cube.002' and so on. All of the cubes are highlighted with a blue background.](images/hierarchy-cubes.png)
 
-Go to the Inspector window and click on the 'Tag' dropdown arrow. Select 'Tile', this will tag all of the cubes. 
-
 --- /task ---
-
-### Add random colours to the tiles
 
 --- task ---
 
-Select the 'Ball' GameObject and add a new script called 'TileController' and drag it to the 'Scripts' folder.
+Click 'Add Component' and create a new script called 'RandomColour'.
 
-Double-click on the 'TileController'. Add an 'OnCollisionEnter' function to change the colour of a tile when the ball rolls over it:
+In the 'Project' window drag 'RandomColour' to the 'Scripts' folder.
+
+Double-click on the 'RandomColour' Script. Add an 'OnCollisionEnter' function to change the colour of a tile when the ball rolls over it:
 
 --- code ---
 ---
 language: cs
-filename: TileController.cs
+filename: RandomColour.cs
 line_numbers: true
-line_number_start: 46
-line_highlights: 14-26
+line_number_start: 1
+line_highlights:
 ---
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class RandomColour : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
     void Update()
     {
         
     }
 
-    void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("Tile"))
-        {
+    void OnCollisionEnter(Collision other) {
+        if (other.gameObject.CompareTag("Player")){
             Color NewColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
-            other.gameObject.transform.GetComponent<MeshRenderer>().material.color = NewColor;
+            gameObject.transform.GetComponent<MeshRenderer>().material.color = NewColor;
         }
     }
-
 }
 --- /code ---
 
@@ -87,47 +83,46 @@ line_highlights: 14-26
 
 --- task ---
 
-Open the 'TileController' script and add this highlighted line of code:
+Select all the Tiles again and add another new script called 'PlaySoundEffect'. 
 
---- code ---
----
-language: cs
-filename: TileController.cs
-line_numbers: true
-line_number_start: 5
-line_highlights: 8
----
-public class TileController : MonoBehaviour
-{
-
-    AudioSource audioSource;
-
---- /code ---
+Move the new script into the 'Scripts' folder.
 
 --- /task ---
 
 --- task ---
 
-Go to your `OnCollisionEnter` code and add these two highlighted lines:
+Open the 'PlaySound' script and type or copy and paste the code below:
 
 --- code ---
 ---
 language: cs
-filename: TileController.cs
+filename: PlaySound.cs
 line_numbers: true
-line_number_start: 22
-line_highlights: 28-29
+line_number_start: 1
+line_highlights: 
 ---
-void OnCollisionEnter(Collision other)
-  {
-     if (other.gameObject.CompareTag("Tile"))
-     {
-        Color NewColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
-        other.gameObject.transform.GetComponent<MeshRenderer>().material.color = NewColor;
-        audioSource = other.gameObject.GetComponent<AudioSource>();
-        audioSource.Play();
-     }
- }
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlaySound : MonoBehaviour
+{
+    AudioSource audioSource;
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    // Check for collisions with the player
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Player")){
+            audioSource.Play();
+        }
+    }
+}
 
 --- /code ---
 
