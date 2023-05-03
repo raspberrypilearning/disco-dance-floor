@@ -11,7 +11,7 @@ In this step you will build the disco dance floor for your project.
 
 --- task ---
 
-Launch the Unity Hub and open the project you created for [Rainbow run](https://projects.raspberrypi.org/en/projects/star-collector/0){:target='_blank'}.
+Launch the Unity Hub and open the project you created for [Rainbow run](https://projects.raspberrypi.org/en/projects/rainbow-run/0){:target='_blank'}.
 
 --- collapse ---
 
@@ -125,7 +125,7 @@ Go to the Hierarchy and right-click on the 'Dance Floor' GameObject. Select **3D
 
 ![The Hierarchy window with the 'Dance Floor' GameObject expanded. Inside is a 'Floor' GameObject and a new 'Cube' GameObject.](images/hierarchy-wall.png)
 
-In the Inspector window, change the Transform properties of the new cube: Position X=`9.5`, Y=`1`, Z=`0` and Scale X=`1`, Y=`2`, Z=`20`. 
+In the Inspector window, change the Transform properties of the new cube: Position X=`9.25`, Y=`1`, Z=`0` and Scale X=`1`, Y=`2`, Z=`19.5`. 
 
 ![The Inspector window with the Transform property showing updated values.](images/transform-wall.png)
 
@@ -137,7 +137,7 @@ In the Inspector window, change the Transform properties of the new cube: Positi
 
 Go to the Hierarchy and right-click on the 'Cube' GameObject. Select **Duplicate**.
 
-In the Inspector window, change the Transform properties of the new cube to. Position X=`-9.5`.
+In the Inspector window, change the Transform properties of the new cube to. Position X=`-9.25`.
 
 ![The Stage view with the tiles and two wall positioned opposite each other.](images/second-wall.png)
 
@@ -147,7 +147,7 @@ In the Inspector window, change the Transform properties of the new cube to. Pos
 
 Go to the Hierarchy and right-click on the original 'Cube' GameObject again. Select **Duplicate**.
 
-In the Inspector window, change the Transform properties of the new cube to Position X=`0`, Y=`1`, Z=`9.5` and Rotation X=`0`, Y=`90`, Z=`0`.
+In the Inspector window, change the Transform properties of the new cube to Position X=`0`, Y=`1`, Z=`9.25` and Rotation X=`0`, Y=`90`, Z=`0`.
 
 ![The Stage view with the tiles and three walls.](images/third-wall.png)
 
@@ -157,7 +157,7 @@ In the Inspector window, change the Transform properties of the new cube to Posi
 
 Go to the Hierarchy and right-click on the 'Cube (2)' GameObject you just rotated. Select **Duplicate**.
 
-In the Inspector window, change the Transform properties of the new cube to Position Z=`-9.5`.
+In the Inspector window, change the Transform properties of the new cube to Position Z=`-9.25`.
 
 ![The Stage view with the tiles and four walls framing the tiles.](images/fourth-wall.png)
 

@@ -13,24 +13,13 @@ In this step you will create a mirror ball and add a script to roll the mirror b
 
 --- task ---
 
-Click on the **View tool** in the Scene view (the hand icon) and drag the view until you are happy with the view of the dance floor. Right-click on the Main Camera object in the Hierarchy window and select 'Align With View':
-
-[[[unity-scene-navigation]]]
-
---- collapse ---
----
-title: Alternatively, enter transform numbers to move the camera
----
-
 Select the 'Main Camera' in the hierarchy window and change the position and rotate properties to match the following:
 
-Position X=`-16`, Y=`15`, Z=`-16` and Rotate X=`35`, Y=`45`, Z=`1`. 
+Position X=`0`, Y=`25`, Z=`-5` and Rotate X=`80`, Y=`0`, Z=`0`. 
 
-Right-click on the 'Main Camera' and choose 'Align View to Selected' to match the scene view to the new camera position. 
+Right-click on the 'Main Camera' and choose 'Align View to Selected' to match the scene view to the new camera position.
 
---- /collapse ---
-
-![A screenshot of the Scene view showing the disco floor. The view is looking from above and behind one corner of the floor and is looking down at a 35 degree angle.](images/camera-view.png)
+![A screenshot of the Scene view showing the disco floor. The view is looking from above at a 80 degree angle.](images/camera-view.png)
 
 --- /task ---
 
@@ -90,36 +79,28 @@ With the 'Ball' selected. Press <kbd>Shift</kbd> + <kbd>F</kbd> to shift focus t
 
 --- /task ---
 
-### Move the ball
+### Tilt the dance floor
 
 --- task ---
 
-Go to the hierarchy window and select the 'Ball' GameObject. In the Inspector, click 'Add Component' and type `BallController`. 
+Go to the hierarchy window and select the 'Ball' GameObject. In the Inspector, click 'Add Component' and type `FloorTilt`.
 
-Select the BallController Script.
+Click 'New script' and then 'Create and Add' to create the script. 
 
---- collapse ---
+The new script will be saved in your assets folder, drag it to the 'Scripts' folder to organise your files.
 
----
-title: I don't have a BallController script
----
+--- /task ---
 
-Create a new script called `BallController` by clicking 'New script' and then 'Create and Add':
+--- task ---
 
-![A screenshot of the Inspector New Script menu with title `BallController` and button 'Create and Add'.](images/new-ball-script.png)
+Open 'FloorTilt' in your code editor. 
 
-Go to the Project window. The new 'BallController' script will be saved in the Assets folder. Drag the new script to the ‘Scripts’ folder to organise your files.
-
-![A screenshot of the Projects window Asset folder contents. The BallController script is highlighted.](images/assets-script.png)
-
-Double click on the ‘BallController’ script. The script will open in a separate code editor.
-
-Copy or type this code to make the ball move:
+Type out or copy and paste the following code into the script.
 
 --- code ---
 ---
 language: cs
-filename: BallController.cs
+filename: FloorTilt.cs
 line_numbers: true
 line_number_start: 1
 line_highlights: 
@@ -129,55 +110,60 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallController : MonoBehaviour
+public class FloorTilt : MonoBehaviour
 {
-    private Rigidbody rb;
-    public Transform cameraTransform;
-    public string rightKey;
+    public float maxTilt;
+    public float turnSpeed;
+
+    public string forwardKey;
     public string leftKey;
-    public string upKey;
-    public string downKey;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-        rb.transform.forward = cameraTransform.forward;
-    }
+    public string backwardKey;
+    public string rightKey;
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        Vector3 forward = new Vector3(cameraTransform.forward.x, 0, cameraTransform.forward.z).normalized;
-        Vector3 right = Quaternion.AngleAxis(90, Vector3.up) * forward;
-        Vector3 left = -right;
-        Vector3 backward = -forward;
+        float targetXRotation = 0;
 
-        if (Input.GetKey(rightKey))
-        {
-            rb.AddForce(right * 5f);
+        if (Input.GetKey(forwardKey)){
+            targetXRotation += maxTilt;
         }
 
-        if (Input.GetKey(leftKey))
-        {
-            rb.AddForce(left * 5f);
+        if (Input.GetKey(backwardKey)){
+            targetXRotation += 360 - maxTilt;
         }
 
-        if (Input.GetKey(upKey))
-        {
-            rb.AddForce(forward * 10f);
+        float targetZRotation = 0;
+
+        if (Input.GetKey(rightKey)){
+            targetZRotation += 360 - maxTilt;
         }
 
-        if (Input.GetKey(downKey))
-        {
-            rb.AddForce(backward * 2f);
+        if (Input.GetKey(leftKey)){
+            targetZRotation += maxTilt;
         }
+
+        Quaternion targetRotation = Quaternion.Euler(targetXRotation, 0, targetZRotation);
+
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
     }
 }
 
 --- /code ---
 
-Save your script and switch back to the Unity editor.
+--- collapse ---
+
+---
+title: What is Lerp?
+---
+
+Lerp is used in Unity to transition between two `Vectors` or `Quaternions` (rotations). 
+
+This method will return a value in between the two Vectors or Quaternions you provide. 
+
+In this case the GameObject will rotate from it's current rotation (`transform.rotation`) towards the `targetRotation` you have set with the key presses.
+
+When you let go of the keys the floor will slowly move back to it's starting rotation.
 
 --- /collapse ---
 
@@ -185,28 +171,38 @@ Save your script and switch back to the Unity editor.
 
 --- task ---
 
-Save your script and switch back to the Unity Editor and click on the 'Ball' GameObject in the Hierarchy window.
+Save your script and switch back to the Unity Editor and click on the 'Dance Floor' GameObject in the Hierarchy window.
 
-Find the 'Camera Transform' property of the Ball's BallController script in the Inspector window.
+Find the 'FloorTilt' component and set 'Max Tilt' to `25` and 'Turn Speed' to `1`. 
 
-Click on the circle to the right of the Camera Transform property and choose the 'Main Camera' GameObject:
+--- collapse ---
 
-![The BallController script component on the Ball with Camera Transform property dropdown menu and 'Main Camera' selected.](images/camera-transform-script.png)
+---
+title: What do these variables do?
+---
 
-Set the key variables to whichever keys you want to use to control your ball:
+The `maxTilt` variable is used to control how **far** the world will be rotated, you can make this larger if you want more rotation and smaller if you want less.
 
-![Screenshot of the BallController component with the keys set as: up = w, left = a, down = s and right = d]()
+`turnSpeed` controls how fast the world rotates, if you make it larger the floor will rotate faster. Be careful not to make it too fast otherwise the `Ball` might fly off your dance floor.
+
+--- /collapse ---
+
+**Choose:** Set the keys you would like to use for tilting your world, we have used the <kbd>WASD</kbd> layout.
 
 --- collapse ---
 ---
 title: I want to use different keys
 ---
 
+You can set whichever keys you would like to use in the Inspector. For letter keys just make sure the letters are **lower case**. 
+
+You can also use the arrows by entering `up` and `down` into the Inspector.
+
 If you want to know the naming conventions to use for the other keys on your keyboard then you can visit the [Unity Documentation](https://docs.unity3d.com/Manual/class-InputManager.html){:target="_blank"}.
 
-You can enter the names into the Inspector.
-
 --- /collapse ---
+
+![The FloorTilt script component on the Dance Floor with the variables 'Max Tilt' set to 25, 'Turn Speed' set to 1, `Forward Key` set to w, 'Left Key' set to a, 'Backward Key` set to s and 'Right key' set to d](images/floor-tilt-script.png).
 
 --- /task ---
 
@@ -216,7 +212,7 @@ You can enter the names into the Inspector.
 
 Use the keys you set in the Inspector to move the ball across the floor: 
 
-![A short animation showing the ball rolling across the tiled floor.](images/move-ball.gif)
+![A short animation showing the ball rolling across the tiled floor.](images/floor-tilt-demo.gif)
 
 Press the 'Play' button again to stop running your project. 
 
