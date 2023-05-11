@@ -21,7 +21,7 @@ Use materials from the Project window, or create your own materials, then add th
 
 <mark>MARC - ADD AN UPGRADE EXAMPLE PLEASE</mark>
 
-<iframe allowtransparency="true" width="710" height="450" src="https://explore-a-3d-world-extended.rpfilt.repl.co" frameborder="0"></iframe>
+<iframe allowtransparency="true" width="710" height="500" src="https://disco-dance-floor-upgraded.rpfilt.repl.co" frameborder="0" scrolling="no"></iframe>
 
 --- collapse ---
 
