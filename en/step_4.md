@@ -9,6 +9,10 @@ In this step you will dim the lights in your disco dance floor scene and add a s
 </div>
 </div>
 
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
+The <span style="color: #0faeb0">**Disco**</span> movement emerged in the 1970s in America. The music and style is a mix of bright colours and technical imagery - perfect for a Unity project!
+</p>
+
 ### Add a glass material to the dance floor
 
 --- task ---

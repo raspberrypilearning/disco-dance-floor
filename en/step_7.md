@@ -19,8 +19,6 @@ Use materials from the Project window, or create your own materials, then add th
 + Tiles (as a start material for the Cubes)
 + Skybox 
 
-<mark>MARC - ADD AN UPGRADE EXAMPLE PLEASE</mark>
-
 <iframe allowtransparency="true" width="710" height="500" src="https://disco-dance-floor-upgraded.rpfilt.repl.co" frameborder="0" scrolling="no"></iframe>
 
 --- collapse ---

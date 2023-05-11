@@ -9,6 +9,10 @@ In this step you will create a mirror ball and add a script to roll the mirror b
 </div>
 </div>
 
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
+Tilting games and puzzles have been around for a long time. One of the first examples is called <span style="color: #0faeb0">**Labyrinth**</span>, which was released in Sweden in <span style="color: #0faeb0">**1946**</span>.
+</p>
+
 ### Set the camera view
 
 --- task ---
