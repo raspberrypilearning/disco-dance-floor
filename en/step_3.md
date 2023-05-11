@@ -5,7 +5,7 @@
 In this step you will create a mirror ball and add a script to roll the mirror ball around the disco dance floor. 
 </div>
 <div>
-![A short animation showing the ball rolling across the tiled floor.](images/move-ball.gif){:width="350px"}
+![A short animation showing the ball rolling across the tiled floor.](images/floor-tilt-demo.gif){:width="350px"}
 </div>
 </div>
 
