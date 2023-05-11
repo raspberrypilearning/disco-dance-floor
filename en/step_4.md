@@ -133,7 +133,7 @@ In the 'Hierarchy' window, right-click and go to 'Light' -> 'Spotlight' to creat
 
 With the 'Spot Light' selected, go to the 'Inspector' window.
 
-Change the transform position to X = `1.5`, Y=`7`, Z=`1.5` to move the spotlight above your mirror ball.
+Change the transform position to X = `1`, Y=`7`, Z=`1` to move the spotlight above your mirror ball.
 
 --- /task ---
 
@@ -141,9 +141,9 @@ Change the transform position to X = `1.5`, Y=`7`, Z=`1.5` to move the spotlight
 
 Staying in the 'Inspector' window. Change the following settings:
 
-+ Range: `30`
++ Range: `20`
 + Spot Angle: `48`
-+ Intensity: `2`
++ Intensity: `1.5`
 + Shadow Type: Soft Shadows
 + Render mode: Important
 
