@@ -13,7 +13,7 @@ You will:
 
 Control the rotation of the dance floor using <kbd>WASD</kbd> (or <kbd>ZQSD</kbd>) or the arrow keys. See and hear what happens when you the ball rolls over a tile.  
 
-<iframe allowtransparency="true" width="710" height="450" src="https://to.be.added.html" frameborder="0"></iframe>
+<iframe allowtransparency="true" width="710" height="500" src="https://disco-dance-floor-basic-example.rpfilt.repl.co" frameborder="0" scrolling="no"></iframe>
 
 --- /no-print ---
 
