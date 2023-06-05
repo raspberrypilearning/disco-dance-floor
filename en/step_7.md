@@ -27,6 +27,6 @@ Use materials from the Project window, or create your own materials, then add th
 title: Completed project
 ---
 
-You can download the basic and extended projects as packages along with the WebGL projects from the [zipped solutions directory](https://rpf.io/p/en/disco-dance-floor-get){:target="_blank"}.
+You can download the basic and extended projects as packages from the [zipped solutions directory](https://rpf.io/p/en/disco-dance-floor-get){:target="_blank"}.
 
 --- /collapse ---
