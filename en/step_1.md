@@ -13,7 +13,7 @@ You will:
 
 Control the rotation of the dance floor using <kbd>WASD</kbd>. See and hear what happens when the ball rolls over a tile.  
 
-<iframe allowtransparency="true" width="710" height="500" src="https://disco-dance-floor-basic-example.rpfilt.repl.co" frameborder="0" scrolling="no"></iframe>
+<iframe allowtransparency="true" width="710" height="500" src="https://raspberrypilearning.github.io/unity-webgl/DiscoDanceFloor" frameborder="0" scrolling="no"></iframe>
 
 --- /no-print ---
 

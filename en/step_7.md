@@ -19,7 +19,7 @@ Use materials from the Project window, or create your own materials, then add th
 + Tiles (as a start material for the Cubes)
 + Skybox 
 
-<iframe allowtransparency="true" width="710" height="500" src="https://disco-dance-floor-upgraded.rpfilt.repl.co" frameborder="0" scrolling="no"></iframe>
+<iframe allowtransparency="true" width="710" height="500" src="https://raspberrypilearning.github.io/unity-webgl/Disco-Dance-Floor-Upgraded" frameborder="0" scrolling="no"></iframe>
 
 --- collapse ---
 
@@ -27,6 +27,6 @@ Use materials from the Project window, or create your own materials, then add th
 title: Completed project
 ---
 
-You can download the basic and extended projects as packages along with the WebGL projects from the  [zipped solutions directory](https://rpf.io/p/en/disco-dance-floor-get){:target="_blank"}.
+You can download the basic and extended projects as packages along with the WebGL projects from the [zipped solutions directory](https://rpf.io/p/en/disco-dance-floor-get){:target="_blank"}.
 
 --- /collapse ---
