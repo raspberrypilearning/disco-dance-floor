@@ -9,11 +9,17 @@ In this step you will build the disco dance floor for your project.
 </div>
 </div>
 
-### Create a project with the starter package
-
 --- task ---
 
-Launch the Unity Hub and click **Projects** then select **New project**:
+Launch the Unity Hub and open the project you created for [Rainbow run](https://projects.raspberrypi.org/en/projects/rainbow-run/0){:target='_blank'}.
+
+--- collapse ---
+
+---
+title: I haven't got my Rainbow run project
+---
+
+If you are unable to open your project, launch the Unity Hub and click **Projects** then select **New project**:
 
 ![A screenshot of the black bar at the top of the Unity Hub with the 'New Project' button highlighted in red.](images/new-project.png)
 
@@ -27,40 +33,31 @@ Edit the project settings to give your project a sensible name and save it to a 
 
 Your new project will open in the Unity Editor. It may take some time to load.
 
---- /task ---
+Download and unzip the [More Unity starter package](https://rpf.io/p/en/rainbow-run-go){:target="_blank"} to your computer. 
 
---- task ---
+**Tip:** Choose a sensible location such as your Documents folder.
 
 The Unity starter package you downloaded for this More Unity path contains a number of **Assets** for you to use in your project.
 
 To import them into your new project, click on the **Assets menu** and select **Import package > Custom Package…** then navigate to the downloaded Unity starter package.
 
---- collapse ---
----
-title: I haven't downloaded a Unity starter package
----
-
-Download and unzip the [More Unity starter package](https://rpf.io/p/en/rainbow-run-go){:target="_blank"} to your computer. 
-
-**Tip:** Choose a sensible location such as your Documents folder. 
-
 --- /collapse ---
-
-[[[unity-importing-a-package]]]
 
 --- /task ---
 
 --- task ---
 
-Right-click on **SampleScene** in the Hierarchy and choose **Save Scene As**: 
+In the **Project** panel right-click and select **Create --> Scene**.
 
-![The scene icon in the Hierarchy window with the right-click menu expanded.](images/right-click-scene.png)
+![The right-click menu with Create and Scene highlighted](images/create-scene.png)
 
 In the pop-up window, name your Scene `Disco Dance Floor`:
 
 A new file will appear in the Assets folder in the Project window:
 
-![Project window with Disco dance floor scene in the Assets folder.](images/disco-dance-floor-scene.png)
+![Project window with Disco Dance Floor scene in the Assets folder.](images/disco-dance-floor-scene.png)
+
+Drag the new Scene into the 'Scenes' folder to organise your files.
 
 --- /task ---
 
@@ -70,7 +67,7 @@ A new file will appear in the Assets folder in the Project window:
 
 In the Project window, click on **Parts**.
 
-**Drag** the 'Floor' object to the Scene view: 
+**Drag** the '8x8Floor' object to the Scene view: 
 
 Your scene should look like this:
 
@@ -80,21 +77,21 @@ Your scene should look like this:
 
 --- task ---
 
-Go to the Inspector window. Click on the Transform component menu and select 'Reset'. This will centre your floor in the world:
+In the Inspector window, change the Transform properties of the '8x8Floor' GameObject: Position X=`0`, Y=`0`, Z=`0`.
 
-![The Inspector window with th Transform component drop down menu expanded and top menu item 'Reset' highlighted.](images/transform-reset.png)
+![The Inspector window with the Transform component of the 8x8Floor GameObject, with position values all set to 0](images/floor-position.png)
 
 --- /task ---
 
 --- task ---
 
-In the Hierarchy window, right-click on the 'Floor' GameObject and select **Create Empty Parent**. 
+In the Hierarchy window, right-click on the '8x8Floor' GameObject and select **Create Empty Parent**. 
 
-A new parent will 'GameObject' will be created:
+A new parent 'GameObject' will be created:
 
 ![The Hierarchy window with the 'Floor' GameObject nested inside a new object called 'GameObject'.](images/empty-parent.png)
 
-Right-click on the new gameObject and rename it to 'Dance Floor':
+Right-click on the new GameObject and rename it to 'Dance Floor':
 
 ![The Inspector window with the name property highlighted and the typed name 'Dance Floor'.](images/rename-gameobject.png)
 
@@ -124,11 +121,11 @@ With all the cubes selected, go to the Inspector window and click 'Add Component
 
 --- task ---
 
-Go to the Hierarchy and right-click on the 'Dance Floor' gameObject. Select **3D Object > Cube**:
+Go to the Hierarchy and right-click on the 'Dance Floor' GameObject. Select **3D Object > Cube**:
 
-![The Hierarchy window with the 'Dance Floor' GameObject expanded. Inside is a 'Floor' gameObject and a new 'Cube' gameObject.](images/hierarchy-wall.png)
+![The Hierarchy window with the 'Dance Floor' GameObject expanded. Inside is a 'Floor' GameObject and a new 'Cube' GameObject.](images/hierarchy-wall.png)
 
-In the Inspector window, change the Transform properties of the new cube to. Position X=`9.5`, Y=`1`, Z=`0` and Scale X=`1`, Y=`2`, Z=`20`. 
+In the Inspector window, change the Transform properties of the new cube: Position X=`9.25`, Y=`1`, Z=`0` and Scale X=`1`, Y=`2`, Z=`19.5`. 
 
 ![The Inspector window with the Transform property showing updated values.](images/transform-wall.png)
 
@@ -138,9 +135,9 @@ In the Inspector window, change the Transform properties of the new cube to. Pos
 
 --- task ---
 
-Go to the Hierarchy and right-click on the 'Cube' gameObject. Select **Duplicate**.
+Go to the Hierarchy and right-click on the 'Cube' GameObject. Select **Duplicate**.
 
-In the Inspector window, change the Transform properties of the new cube to. Position X=`-9.5`.
+In the Inspector window, change the Transform properties of the new cube to. Position X=`-9.25`.
 
 ![The Stage view with the tiles and two wall positioned opposite each other.](images/second-wall.png)
 
@@ -148,9 +145,9 @@ In the Inspector window, change the Transform properties of the new cube to. Pos
 
 --- task ---
 
-Go to the Hierarchy and right-click on the 'Cube' gameObject again. Select **Duplicate**.
+Go to the Hierarchy and right-click on the original 'Cube' GameObject again. Select **Duplicate**.
 
-In the Inspector window, change the Transform properties of the new cube to Position X=`0`, Y=`1`, Z=`9.5` and Rotation X=`0`, Y=`90`, Z=`0`.
+In the Inspector window, change the Transform properties of the new cube to Position X=`0`, Y=`1`, Z=`9.25` and Rotation X=`0`, Y=`90`, Z=`0`.
 
 ![The Stage view with the tiles and three walls.](images/third-wall.png)
 
@@ -158,9 +155,9 @@ In the Inspector window, change the Transform properties of the new cube to Posi
 
 --- task ---
 
-Go to the Hierarchy and right-click on the 'Cube' gameObject again. Select **Duplicate**.
+Go to the Hierarchy and right-click on the 'Cube (2)' GameObject you just rotated. Select **Duplicate**.
 
-In the Inspector window, change the Transform properties of the new cube to Position Z=`-9.5`.
+In the Inspector window, change the Transform properties of the new cube to Position Z=`-9.25`.
 
 ![The Stage view with the tiles and four walls framing the tiles.](images/fourth-wall.png)
 

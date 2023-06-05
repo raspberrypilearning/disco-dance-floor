@@ -5,7 +5,7 @@
 legend: Question 3 of 3
 ---
 
-In your project you used a **Tag**. Is it possible to add the same tag to more than one game object?
+In your project you used some **Materials**. Is it possible to add the same Material to more than one game object at once?
 
 --- choices ---
 
@@ -14,7 +14,7 @@ In your project you used a **Tag**. Is it possible to add the same tag to more t
 
   --- feedback ---
 
-  That’s correct. You tagged all of your tiles with the ‘Tile’ tag. This is a much more efficient way to script in Unity.
+  That’s correct. If you hold <kbd>Shift</kbd> you can select multiple GameObjects and add a Material in the Inspector window.
 
   --- /feedback ---
 
@@ -22,7 +22,7 @@ In your project you used a **Tag**. Is it possible to add the same tag to more t
 
   --- feedback ---
 
-   Hmm try again. You can assign the same tag to multiple objects, in fact one of the main reasons to use tags is to save time scripting the same behaviour for multiple objects.
+   Hmm try again. In order to add the same Material to multiple objects you would have to select them all. Is there a way to select more than one GameObject in the Hierarchy window.
 
   --- /feedback ---
 

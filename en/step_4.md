@@ -9,6 +9,10 @@ In this step you will dim the lights in your disco dance floor scene and add a s
 </div>
 </div>
 
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
+The <span style="color: #0faeb0">**Disco**</span> movement emerged in the 1970s in America. The music and style is a mix of bright colours and technical imagery - perfect for a Unity project!
+</p>
+
 ### Add a glass material to the dance floor
 
 --- task ---
@@ -37,7 +41,7 @@ With the 'Glass' material selected. Go to the 'Inspector' window.
 
 Change the 'Rendering Mode' to 'Transparent'.
 
-Set 'Metallic' to `0.5` and set 'Smoothness' to `0.5`.
+Set 'Metallic' to `0.5`.
 
 ![A screenshot showing the new settings in the 'Inspector' window.](images/glass-settings.png)
 
@@ -73,7 +77,7 @@ This will apply the 'Glass' material to all of your tiles.
 
 --- task ---
 
-In the 'Materials' folder in the 'Project' window, add a new material named 'DarkSkybox'.
+In the 'Materials' folder in the 'Project' window, create a new material named 'DarkSkybox'.
 
 --- /task ---
 
@@ -133,7 +137,7 @@ In the 'Hierarchy' window, right-click and go to 'Light' -> 'Spotlight' to creat
 
 With the 'Spot Light' selected, go to the 'Inspector' window.
 
-Change the transform position to X = `1.5`, Y=`7`, Z=`1.5` to move the spotlight above your mirror ball.
+Change the transform position to X = `1`, Y=`7`, Z=`1` to move the spotlight above your mirror ball.
 
 --- /task ---
 
@@ -141,18 +145,19 @@ Change the transform position to X = `1.5`, Y=`7`, Z=`1.5` to move the spotlight
 
 Staying in the 'Inspector' window. Change the following settings:
 
-+ Range: `30`
++ Range: `20`
 + Spot Angle: `48`
-+ Intensity: `2`
++ Intensity: `1.5`
 + Shadow Type: Soft Shadows
-+ Normal bias: `0.4`
-+ Near plane: `0.1`
 + Render mode: Important
 
 --- /task ---
 
 --- task ---
-**Test:** 'Play' your project to see the spotlight over the ball. Use the keys to move the ball. The spotlight will stay in the same position. 
+
+**Test:** 'Play' your project to see the spotlight over the ball. Use the keys to move the ball. The spotlight will stay in the same position.
+ 
+Press the 'Play' button again to stop running your project. 
 
 --- /task ---
 
@@ -162,7 +167,7 @@ Staying in the 'Inspector' window. Change the following settings:
 
 Go to the 'Hierarchy' window and select the **Ball** GameObject.
 
-In the 'Inspector' window, go to 'Add Component' and search for 'Script' and choose 'NewScript'.
+In the 'Inspector' window, go to 'Add Component' and search for 'Script' and choose 'New script'.
 
 Name the new script 'SpotlightController' and drag it into the 'Scripts' folder.
 
