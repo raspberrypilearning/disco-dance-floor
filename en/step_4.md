@@ -77,13 +77,13 @@ This will apply the 'Glass' material to all of your tiles.
 
 --- task ---
 
-In the 'Materials' folder in the 'Project' window, create a new material named 'DarkSkybox'.
+In the 'Materials' folder in the 'Project' window, create a new material named 'DarkSkyBox'.
 
 --- /task ---
 
 --- task ---
 
-With the new 'DarkSkybox' material selected. Go to the 'Inspector' window.
+With the new 'DarkSkyBox' material selected. Go to the 'Inspector' window.
 
 Change the 'Shader' to 'Skybox -> 6 Sided'.
 
@@ -99,7 +99,7 @@ Change the 'Tint Color' to black by moving the R, G, B sliders down to `0`.
 
 --- task ---
 
-Drag the new 'DarkSkybox' from the 'Materials' folder onto the background of your scene. 
+Drag the new 'DarkSkBox' from the 'Materials' folder onto the background of your scene. 
 
 Your scene will become very dark!
 

@@ -91,7 +91,7 @@ Go to the hierarchy window and select the 'Ball' GameObject. In the Inspector, c
 
 Click 'New script' and then 'Create and Add' to create the script. 
 
-The new script will be saved in your assets folder, drag it to the 'Scripts' folder to organise your files.
+The new script will be saved in your 'Assets' folder, drag it to the 'Scripts' folder to organise your files.
 
 --- /task ---
 

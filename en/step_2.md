@@ -117,6 +117,16 @@ With all the cubes selected, go to the Inspector window and click 'Add Component
 
 --- /task ---
 
+--- task ---
+
+With all the Cubes still selected, Add a 'Rigidbody' component. 
+
+![The Rigidbody component on the tiles, with 'Use Gravity' set to false and 'Is Kinematic' set to true.](images/floor-rigidbody.png)
+
+Make sure that 'Use Gravity' is `false` and 'Is Kinematic' is `true`.
+
+--- /task ---
+
 ### Add walls
 
 --- task ---
