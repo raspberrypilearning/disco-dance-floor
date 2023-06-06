@@ -129,21 +129,25 @@ public class FloorTilt : MonoBehaviour
     {
         float targetXRotation = 0;
 
-        if (Input.GetKey(forwardKey)){
+        if (Input.GetKey(forwardKey))
+        {
             targetXRotation += maxTilt;
         }
 
-        if (Input.GetKey(backwardKey)){
+        if (Input.GetKey(backwardKey))
+        {
             targetXRotation += 360 - maxTilt;
         }
 
         float targetZRotation = 0;
 
-        if (Input.GetKey(rightKey)){
+        if (Input.GetKey(rightKey))
+        {
             targetZRotation += 360 - maxTilt;
         }
 
-        if (Input.GetKey(leftKey)){
+        if (Input.GetKey(leftKey))
+        {
             targetZRotation += maxTilt;
         }
 

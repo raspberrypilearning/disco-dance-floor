@@ -58,8 +58,10 @@ public class RandomColour : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision other) {
-        if (other.gameObject.CompareTag("Player")){
+    void OnCollisionEnter(Collision other) 
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
             Color NewColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
             gameObject.transform.GetComponent<MeshRenderer>().material.color = NewColor;
         }
@@ -118,7 +120,8 @@ public class PlaySound : MonoBehaviour
     // Check for collisions with the player
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Player")){
+        if (other.gameObject.CompareTag("Player"))
+        {
             audioSource.Play();
         }
     }
