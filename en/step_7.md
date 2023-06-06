@@ -1,13 +1,13 @@
 ## Upgrade your project
 
-Now you can customise and extend your Disco dance floor.
+Now you can customise and extend your disco dance floor.
 
 ### More spot lights
 
 Add more Spotlight GameObjects then change:
-    + the spot light starting position 
-    + the spot light rotation
-    + the colour of the light
++ the spot light starting position 
++ the spot light rotation
++ the colour of the light
 
 **Tip:** Remember to add the 'SpotlightController' script for each new spotlight then drag the new spot light to the 'Spotlight' property for the script. 
 

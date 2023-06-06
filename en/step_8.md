@@ -1,6 +1,6 @@
 ## What next?
 
-If you are following the [More Unity](https://projects.raspberrypi.org/en/raspberrypi/more-unity) path, you can move on to the [Don't fall through](https://projects.raspberrypi.org/en/projects/dont-fall-through) project. In this project, you will make a tiltable disco dance floor with tiles that light-up and play musical notes when a ball rolls over them.
+If you are following the [More Unity](https://projects.raspberrypi.org/en/raspberrypi/more-unity) path, you can move on to the [Don't fall through](https://projects.raspberrypi.org/en/projects/dont-fall-through) project. In this project, you will create a multiplayer tile game where players have to race to find a safe path across the floor!
 
 --- print-only ---
 
