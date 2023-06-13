@@ -22,7 +22,7 @@ In your project you used some **Materials**. Is it possible to add the same Mate
 
   --- feedback ---
 
-   Hmm try again. In order to add the same Material to multiple objects you would have to select them all. Is there a way to select more than one GameObject in the Hierarchy window.
+   Hmm, try again. In order to add the same Material to multiple objects you would have to select them all. Is there a way to select more than one GameObject in the Hierarchy window?
 
   --- /feedback ---
 

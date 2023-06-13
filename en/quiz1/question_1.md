@@ -4,7 +4,7 @@ Answer these three questions to get your ‘Disco dance floor’ badge.
 
 There are hints to guide you to the correct answer.
 
-When you have answered each question, click on Check my answer.
+When you have answered each question, click on **Check my answer**.
 
 Have fun!
 
