@@ -1,11 +1,18 @@
----
 title: Disco dance floor
 hero_image: images/banner.png
 description: Create a disco dance floor with a moving mirror ball that creates cool tile effects and sounds.
-version: 4
+meta_title: Disco dance floor
+meta_description: Create a disco dance floor with a moving mirror ball that creates cool tile effects and sounds.
+keywords:
+- unity
+- ball
+- marble
+- 3d
+- game
+version: 1
 listed: false
 copyedit: false
-last_tested: "2021-03-26"
+last_tested: "2023-06-13"
 steps:
   - title: You will make
   - title: Build the disco floor
