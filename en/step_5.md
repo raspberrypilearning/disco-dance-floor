@@ -2,12 +2,12 @@
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-In this step you will add code to your script that will change the tile to a random colour and play a musical note when it is rolled over by the mirror ball. 
+In this step, you will add code to your script that will change the tile to a random colour and play a musical note when it is rolled over by the mirror ball. 
 </div>
 <div>
 <video width="640" height="360" controls preload="none" poster="images/add-sound.png">
 <source src="images/tile-sounds.mp4" type="video/mp4">
-Your browser does not support WebM video, try FireFox or Chrome
+Your browser does not support WebM video, try FireFox or Chrome.
 </video>
 </div>
 </div>
@@ -18,9 +18,9 @@ Your browser does not support WebM video, try FireFox or Chrome
 
 In the Hierarchy window, expand the 'Dance Floor' then 'Floor' GameObjects. Select all of the cubes.
 
-**Tip:** Hold down the shift and scroll to the bottom of the list of cubes then click on ‘Cube.0063’. All of the cubes will be highlighted:
+**Tip:** Hold down the <kbd>Shift</kbd> key and scroll to the bottom of the list of cubes then click on ‘Cube.0063’. All of the cubes will be highlighted:
 
-![The Hierarchy window with the 'Floor' GameObject expanded showing a number of cube objects within it. The cubes are names 'Cube', 'Cube.001', 'Cube.002' and so on. All of the cubes are highlighted with a blue background.](images/hierarchy-cubes.png)
+![The Hierarchy window with the 'Floor' GameObject expanded showing a number of cube objects within it. The cubes are names 'Cube', 'Cube.001', 'Cube.002' and so on. All of the cubes are highlighted.](images/hierarchy-cubes.png)
 
 --- /task ---
 
@@ -28,7 +28,7 @@ In the Hierarchy window, expand the 'Dance Floor' then 'Floor' GameObjects. Sele
 
 Click 'Add Component' and create a new script called 'RandomColour'.
 
-In the 'Project' window drag 'RandomColour' to the 'Scripts' folder.
+In the 'Project' window, drag 'RandomColour' to the Scripts folder.
 
 Double-click on the 'RandomColour' Script. Add an 'OnCollisionEnter' function to change the colour of a tile when the ball rolls over it:
 
@@ -87,7 +87,7 @@ public class RandomColour : MonoBehaviour
 
 Select all the Tiles again and add another new script called 'PlaySoundEffect'. 
 
-Move the new script into the 'Scripts' folder.
+Move the new script into the Scripts folder.
 
 --- /task ---
 
@@ -154,28 +154,28 @@ With the cubes still all selected, find the 'Volume' property in the **Audio Sou
 
 In the Project window open **Sounds > MusicalNotes**. There are 25 different musical notes in this folder:
 
-![The Project window showing the MusicalNotes folder with audio clips named after the note they represent. For example a4 and b5.](images/musical-notes.png)
+![The Project window showing the MusicalNotes folder with audio clips named after the musical note they represent. For example a4 and b5.](images/musical-notes.png)
 
 --- /task ---
 
 --- task ---
 
-Go to the Hierarchy window and click on the first cube 'Cube' inside the 'Floor' GameObject. 
+Go to the Hierarchy window and click on the first cube, 'Cube' inside the 'Floor' GameObject. 
 
-In the Inspector window, find 'AudioClip'.  Drag a note from the Project window to the 'AudioClip' property. 
+In the Inspector window, find 'AudioClip'.  Drag a musical note from the Project window to the 'AudioClip' property. 
 
 <video width="640" height="360" controls preload="none" poster="images/add-sound.png">
 <source src="images/add-sound.mp4" type="video/mp4">
-Your browser does not support WebM video, try FireFox or Chrome
+Your browser does not support WebM video, try FireFox or Chrome.
 </video>
 
 --- /task ---
 
 --- task ---
 
-**Choose:** Select the next cube and drag a note to the 'AudioClip' property. Repeat for each cube.
+**Choose:** Select the next cube and drag a musical note to the 'AudioClip' property. Repeat for each cube.
 
-**Tip:** Hold down the <kbd>Ctrl/Cmd</kbd> key and select multiple cubes from the Hierarchy or Scene view to add the note to more than one tile at a time.
+**Tip:** Hold down the <kbd>Ctrl/Cmd</kbd> key and select multiple cubes from the Hierarchy or Scene view to add the musical note to more than one tile at a time.
 
 --- /task ---
 
@@ -186,7 +186,7 @@ Your browser does not support WebM video, try FireFox or Chrome
 
 <video width="640" height="360" controls preload="none" poster="images/tile-sound.png">
 <source src="images/tile-sounds.mp4" type="video/mp4">
-Your browser does not support WebM video, try FireFox or Chrome
+Your browser does not support WebM video, try FireFox or Chrome.
 </video>
 
 --- /task ---

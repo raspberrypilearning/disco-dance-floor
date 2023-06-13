@@ -2,7 +2,7 @@
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-In this step you will create a mirror ball and add a script to roll the mirror ball around the disco dance floor. 
+In this step, you will create a mirror ball and add a script to roll the mirror ball around the disco dance floor. 
 </div>
 <div>
 ![A short animation showing the ball rolling across the tiled floor.](images/floor-tilt-demo.gif){:width="350px"}
@@ -31,7 +31,7 @@ Right-click on the 'Main Camera' and choose 'Align View to Selected' to match th
 
 --- task ---
 
-Go to the 'Hierarchy' window and right-click to create a new Sphere GameObject. 
+Go to the Hierarchy window and right-click to create a new 'Sphere' GameObject. 
 
 **Rename** the sphere 'Ball'.
 
@@ -51,27 +51,27 @@ Position X=`1`, Y=`1.5`, Z=`1` and Scale X=`2`, Y=`2`, Z=`2`.
 
 --- task ---
 
-Make sure that the 'Ball' is selected in the 'Hierarchy'. Go to the 'Inspector Window' and choose 'Add Component'.
+Make sure that the ball is selected in the Hierarchy. Go to the Inspector window and choose 'Add Component'.
 
 Type in 'Rigid' and select the 'Rigidbody' component to add it to the ball. This allows the ball to work with gravity. 
 
-![A screenshot showing the Rigidbody component added in the inspector window.](images/rigid-body.png)
+![A screenshot showing the Rigidbody component added in the Inspector window.](images/rigid-body.png)
 
 --- /task ---
 
 --- task ---
 
-In the Inspector Window click the dropdown next to 'Tag' and add the 'Player' tag to the Ball GameObject.
+In the Inspector window, click the dropdown next to 'Tag' and add the 'Player' tag to the 'Ball' GameObject.
 
 --- /task ---
 
 --- task ---
 
-Go to the 'Project window' and navigate to 'Assets' -> 'Materials'.
+Go to the Project window and navigate to **Assets > Materials**.
 
-Drag the 'MirrorBall' material onto the 'Ball' GameObject in the Scene View.
+Drag the 'MirrorBall' material onto the 'Ball' GameObject in the Scene view.
 
-![A screenshot showing the MirrorBall material on the 'Ball' in the Scene View.](images/add-mirrorball.png)
+![A screenshot showing the MirrorBall material on the ball in the Scene view.](images/add-mirrorball.png)
 
 --- /task ---
 
@@ -87,17 +87,17 @@ With the 'Ball' selected. Press <kbd>Shift</kbd> + <kbd>F</kbd> to shift focus t
 
 --- task ---
 
-Go to the hierarchy window and select the 'Ball' GameObject. In the Inspector, click 'Add Component' and type `FloorTilt`.
+Go to the Hierarchy window and select the 'Ball' GameObject. In the Inspector, click 'Add Component' and type `FloorTilt`.
 
 Click 'New script' and then 'Create and Add' to create the script. 
 
-The new script will be saved in your 'Assets' folder, drag it to the 'Scripts' folder to organise your files.
+The new script will be saved in your Assets folder. Drag it to the Scripts folder to organise your files.
 
 --- /task ---
 
 --- task ---
 
-Open 'FloorTilt' in your code editor. 
+Open **FloorTilt** in your code editor. 
 
 Type out or copy and paste the following code into the script.
 
@@ -169,9 +169,9 @@ Lerp is used in Unity to transition between two `Vectors` or `Quaternions` (rota
 
 This method will return a value in between the two Vectors or Quaternions you provide. 
 
-In this case the GameObject will rotate from it's current rotation (`transform.rotation`) towards the `targetRotation` you have set with the key presses.
+In this case, the GameObject will rotate from it's current rotation (`transform.rotation`) towards the `targetRotation` you have set with the key presses.
 
-When you let go of the keys the floor will slowly move back to it's starting rotation.
+When you let go of the keys, the floor will slowly move back to its starting rotation.
 
 --- /collapse ---
 
@@ -179,7 +179,7 @@ When you let go of the keys the floor will slowly move back to it's starting rot
 
 --- task ---
 
-Save your script and switch back to the Unity Editor and click on the 'Dance Floor' GameObject in the Hierarchy window.
+Save your script and switch back to the Unity Editor. Click on the 'Dance Floor' GameObject in the Hierarchy window.
 
 Find the 'FloorTilt' component and set 'Max Tilt' to `25` and 'Turn Speed' to `1`. 
 
@@ -189,28 +189,28 @@ Find the 'FloorTilt' component and set 'Max Tilt' to `25` and 'Turn Speed' to `1
 title: What do these variables do?
 ---
 
-The `maxTilt` variable is used to control how **far** the world will be rotated, you can make this larger if you want more rotation and smaller if you want less.
+The `maxTilt` variable is used to control how **far** the world will be rotated. You can make this larger if you want more rotation and smaller if you want less.
 
-`turnSpeed` controls how fast the world rotates, if you make it larger the floor will rotate faster. Be careful not to make it too fast otherwise the `Ball` might fly off your dance floor.
+The `turnSpeed` variable controls how fast the world rotates. If you make it larger, the floor will rotate faster. Be careful not to make it too fast otherwise the `Ball` might fly off your dance floor!
 
 --- /collapse ---
 
-**Choose:** Set the keys you would like to use for tilting your world, we have used the <kbd>WASD</kbd> layout.
+**Choose:** Set the keys you would like to use for tilting your world. We have used the <kbd>WASD</kbd> layout.
 
 --- collapse ---
 ---
 title: I want to use different keys
 ---
 
-You can set whichever keys you would like to use in the Inspector. For letter keys just make sure the letters are **lower case**. 
+You can set whichever keys you would like to use in the Inspector. For letter keys, just make sure the letters are **lower case**. 
 
 You can also use the arrows by entering `up` and `down` into the Inspector.
 
-If you want to know the naming conventions to use for the other keys on your keyboard then you can visit the [Unity Documentation](https://docs.unity3d.com/Manual/class-InputManager.html){:target="_blank"}.
+If you want to know the naming conventions to use for the other keys on your keyboard, you can visit the [Unity Documentation](https://docs.unity3d.com/Manual/class-InputManager.html){:target="_blank"}.
 
 --- /collapse ---
 
-![The FloorTilt script component on the Dance Floor with the variables 'Max Tilt' set to 25, 'Turn Speed' set to 1, `Forward Key` set to w, 'Left Key' set to a, 'Backward Key` set to s and 'Right key' set to d](images/floor-tilt-script.png).
+![The FloorTilt script component on the Dance Floor with the variables 'Max Tilt' set to 25, 'Turn Speed' set to 1, `Forward Key` set to w, 'Left Key' set to a, 'Backward Key` set to s and 'Right key' set to d.](images/floor-tilt-script.png).
 
 --- /task ---
 

@@ -2,7 +2,7 @@
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-In this step you will build the disco dance floor for your project. 
+In this step, you will build the disco dance floor for your project. 
 </div>
 <div>
 ![The Stage view with the tiles and four walls framing the tiles.](images/fourth-wall.png){:width="350px"}
@@ -21,15 +21,15 @@ title: I haven't got my Rainbow run project
 
 If you are unable to open your project, launch the Unity Hub and click **Projects** then select **New project**:
 
-![A screenshot of the black bar at the top of the Unity Hub with the 'New Project' button highlighted in red.](images/new-project.png)
+![A screenshot of the black bar at the top of the Unity Hub with the 'New project' button highlighted in red.](images/new-project.png)
 
-From the list choose **All templates** then select **3D Core**:
+From the list, choose **All templates** then select **3D Core**:
 
-![A screenshot of the left pane in the Unity Hub. The 3D core option is highlighted in red.](images/3D-core.png)
+![A screenshot of the left-hand pane in the Unity Hub. The 3D core option is highlighted in red.](images/3D-core.png)
 
-Edit the project settings to give your project a sensible name and save it to a sensible location. Then click **Create project**:
+Edit the Project settings to give your project a sensible name and save it to a sensible location. Then click **Create project**:
 
-![A screenshot of the right pane in the Unity Hub. The filename and the 'Create Project' sections are highlighted in red.](images/create-project.png)
+![A screenshot of the right-hand pane in the Unity Hub. The filename and the 'Create Project' sections are highlighted in red.](images/create-project.png)
 
 Your new project will open in the Unity Editor. It may take some time to load.
 
@@ -47,9 +47,9 @@ To import them into your new project, click on the **Assets menu** and select **
 
 --- task ---
 
-In the **Project** panel right-click and select **Create --> Scene**.
+In the **Project** panel, right-click and select **Create > Scene**.
 
-![The right-click menu with Create and Scene highlighted](images/create-scene.png)
+![The right-click menu with Create and Scene highlighted.](images/create-scene.png)
 
 In the pop-up window, name your Scene `Disco Dance Floor`:
 
@@ -57,7 +57,7 @@ A new file will appear in the Assets folder in the Project window:
 
 ![Project window with Disco Dance Floor scene in the Assets folder.](images/disco-dance-floor-scene.png)
 
-Drag the new Scene into the 'Scenes' folder to organise your files.
+Drag the new Scene into the Scenes folder to organise your files.
 
 --- /task ---
 
@@ -71,7 +71,7 @@ In the Project window, click on **Parts**.
 
 Your scene should look like this:
 
-![The Scene View with a grey grid of 8*8 square tiles.](images/tiled-floor.png)
+![The Scene view with a grey grid of 8x8 square tiles.](images/tiled-floor.png)
 
 --- /task ---
 
@@ -79,7 +79,7 @@ Your scene should look like this:
 
 In the Inspector window, change the Transform properties of the '8x8Floor' GameObject: Position X=`0`, Y=`0`, Z=`0`.
 
-![The Inspector window with the Transform component of the 8x8Floor GameObject, with position values all set to 0](images/floor-position.png)
+![The Inspector window with the Transform component of the 8x8Floor GameObject, with position values all set to 0.](images/floor-position.png)
 
 --- /task ---
 
@@ -91,7 +91,7 @@ A new parent 'GameObject' will be created:
 
 ![The Hierarchy window with the 'Floor' GameObject nested inside a new object called 'GameObject'.](images/empty-parent.png)
 
-Right-click on the new GameObject and rename it to 'Dance Floor':
+Right-click on the new GameObject and rename it 'Dance Floor':
 
 ![The Inspector window with the name property highlighted and the typed name 'Dance Floor'.](images/rename-gameobject.png)
 
@@ -99,27 +99,27 @@ Right-click on the new GameObject and rename it to 'Dance Floor':
 
 --- task ---
 
-From the Hierarchy window you can see that the 'Floor' GameObject contains 64 individually numbered cubes.
+From the Hierarchy window, you can see that the 'Floor' GameObject contains 64 individually numbered cubes.
 
-Click on the 'Cube' GameObject. Hold down the <kbd>shift</kbd> and scroll to the bottom of the list of cubes then click on 'Cube.0063'. All of the cubes will be highlighted: 
+Click on the 'Cube' GameObject. Hold down the <kbd>Shift</kbd> key and scroll to the bottom of the list of cubes, then click on 'Cube.0063'. All of the cubes will be highlighted: 
 
-![The Hierarchy window with the 'Floor' GameObject expanded showing a number of cube objects within it. The cubes are names 'Cube', 'Cube.001', 'Cube.002' and so on. All of the cubes are highlighed with a blue background.](images/hierarchy-cubes.png)
-
---- /task ---
-
---- task ---
-
-With all the cubes selected, go to the Inspector window and click 'Add Component'. Type 'Box' into the search box then click on 'Box Collider'. This will add a box collider to each of the cubes:
-
-![The Inspector window with the Add Component search box and the word 'box' typed in the top search bar. The top result returned is 'Box Collider' and this is highlighted](images/add-box-collider.png)
-
-![The Scene view showing some of the tiles. There is a thin green line around the edges of each tile to show the box colliders.](images/box-collider-scene.png)
+![The Hierarchy window with the 'Floor' GameObject expanded showing a number of cube objects within it. The cubes are names 'Cube', 'Cube.001', 'Cube.002' and so on. All of the cube names are in blue text and highlighted by a red rectangle.](images/hierarchy-cubes.png)
 
 --- /task ---
 
 --- task ---
 
-With all the Cubes still selected, Add a 'Rigidbody' component. 
+With all the cubes selected, go to the Inspector window and click 'Add Component'. Type 'Box' into the search box then click on 'Box Collider'. This will add a Box Collider to each of the cubes:
+
+![The Inspector window with the Add Component search box and the word 'box' typed in the top search bar. The top result returned is 'Box Collider' and this is highlighted in red.](images/add-box-collider.png)
+
+![The Scene view showing some of the tiles. There is a thin green line around the edges of each tile to show the Box Colliders.](images/box-collider-scene.png)
+
+--- /task ---
+
+--- task ---
+
+With all the Cubes still selected, add a 'Rigidbody' component. 
 
 ![The Rigidbody component on the tiles, with 'Use Gravity' set to false and 'Is Kinematic' set to true.](images/floor-rigidbody.png)
 
@@ -131,7 +131,7 @@ Make sure that 'Use Gravity' is `false` and 'Is Kinematic' is `true`.
 
 --- task ---
 
-Go to the Hierarchy and right-click on the 'Dance Floor' GameObject. Select **3D Object > Cube**:
+Go to the Hierarchy window and right-click on the 'Dance Floor' GameObject. Select **3D Object > Cube**:
 
 ![The Hierarchy window with the 'Dance Floor' GameObject expanded. Inside is a 'Floor' GameObject and a new 'Cube' GameObject.](images/hierarchy-wall.png)
 
@@ -139,13 +139,13 @@ In the Inspector window, change the Transform properties of the new cube: Positi
 
 ![The Inspector window with the Transform property showing updated values.](images/transform-wall.png)
 
-![The Stage view with the tiles and one wall positioned at the bottom left edge.](images/first-wall.png)
+![The Stage view with the tiles and one wall positioned at the bottom left-hand edge.](images/first-wall.png)
 
 --- /task ---
 
 --- task ---
 
-Go to the Hierarchy and right-click on the 'Cube' GameObject. Select **Duplicate**.
+Go to the Hierarchy window and right-click on the 'Cube' GameObject. Select **Duplicate**.
 
 In the Inspector window, change the Transform properties of the new cube to. Position X=`-9.25`.
 
@@ -165,7 +165,7 @@ In the Inspector window, change the Transform properties of the new cube to Posi
 
 --- task ---
 
-Go to the Hierarchy and right-click on the 'Cube (2)' GameObject you just rotated. Select **Duplicate**.
+Go to the Hierarchy window and right-click on the 'Cube (2)' GameObject you just rotated. Select **Duplicate**.
 
 In the Inspector window, change the Transform properties of the new cube to Position Z=`-9.25`.
 
