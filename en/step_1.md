@@ -18,7 +18,7 @@ Control the rotation of the dance floor using <kbd>WASD</kbd>. See and hear what
 --- /no-print ---
 
 --- print-only ---
-![Complete project](images/showcase_static.png)
+![A ball spotlighted hovering over a green tile on a grid of tiles. This is a preview of the completed project](images/showcase_static.png)
 --- /print-only ---
 
 ### You will need
